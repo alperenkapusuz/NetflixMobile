@@ -6,7 +6,7 @@ import styles from './MoviesScreen.style';
 const MoviesScreen = () => {
   const [list] = useMovie();
 
-  return <CustomListScreen list={list} style={styles.container} />;
+  return <CustomListScreen list={list} />;
 };
 
 export default MoviesScreen;

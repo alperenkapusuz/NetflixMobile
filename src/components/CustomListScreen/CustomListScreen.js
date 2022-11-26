@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, FlatList, ScrollView} from 'react-native';
+import {SafeAreaView, FlatList, View} from 'react-native';
 import {SelectList} from 'react-native-dropdown-select-list';
 import CustomRenderItem from '../CustomRenderItem/CustomRenderItem';
 import CustomInput from '../CustomInput/CustomInput';
+import styles from './CustomListScreen.style';
 
 const CustomListScreen = ({list}) => {
   const [search, setSearch] = useState('');
@@ -54,14 +55,20 @@ const CustomListScreen = ({list}) => {
   };
 
   return (
-    <SafeAreaView>
-      <CustomInput text={search} setText={setSearch} placeholder="Film Ara" />
-      <SelectList
-        setSelected={val => setSelected(val)}
-        data={dropdownData}
-        save="value"
-        onSelect={handleSort}
-      />
+    <SafeAreaView style={styles.container}>
+      <View style={styles.input}>
+        <CustomInput text={search} setText={setSearch} placeholder="Search" />
+        <SelectList
+          setSelected={val => setSelected(val)}
+          data={dropdownData}
+          save="value"
+          onSelect={handleSort}
+          dropdownItemStyles={{marginHorizontal: 10}}
+          dropdownStyles={{backgroundColor: '#B9B9B9'}}
+          dropdownShown={{backgroundColor: '#B9B9B9'}}
+          boxStyles={{backgroundColor: '#B9B9B9'}}
+        />
+      </View>
       <FlatList
         data={filteredDataSource.slice(0, 18)}
         renderItem={renderItem}

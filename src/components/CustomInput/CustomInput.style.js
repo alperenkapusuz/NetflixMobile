@@ -9,11 +9,12 @@ export default StyleSheet.create({
     margin: 2,
     borderColor: 'black',
     borderWidth: 1,
-    borderRadius: 5,
+    borderRadius: 10,
     placeholderTextColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
     width: Dimensions.get('window').width / 1,
     color: 'black',
+    backgroundColor: '#B9B9B9',
   },
 });
