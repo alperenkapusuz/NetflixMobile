@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, FlatList} from 'react-native';
+import {SafeAreaView, FlatList, Dimensions, View} from 'react-native';
 import {SelectList} from 'react-native-dropdown-select-list';
 import CustomRenderItem from '../CustomRenderItem/CustomRenderItem';
 import CustomInput from '../CustomInput/CustomInput';
@@ -62,10 +62,12 @@ const CustomListScreen = ({list}) => {
         save="value"
         onSelect={handleSort}
       />
-      <FlatList
-        data={filteredDataSource.slice(0, 18)}
-        renderItem={renderItem}
-      />
+      <View>
+        <FlatList
+          data={filteredDataSource.slice(0, 18)}
+          renderItem={renderItem}
+        />
+      </View>
     </SafeAreaView>
   );
 };

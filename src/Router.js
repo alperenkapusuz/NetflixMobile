@@ -10,10 +10,23 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="MoviesScreen" component={MoviesScreen} />
-        <Stack.Screen name="SeriesScreen" component={SeriesScreen} />
+      <Stack.Navigator
+        screenOptions={{headerStyle: {backgroundColor: '#831010'}}}>
+        <Stack.Screen
+          name="HomeScreen"
+          component={HomeScreen}
+          options={{title: 'Popular titles'}}
+        />
+        <Stack.Screen
+          name="MoviesScreen"
+          component={MoviesScreen}
+          options={{title: 'Movies'}}
+        />
+        <Stack.Screen
+          name="SeriesScreen"
+          component={SeriesScreen}
+          options={{title: 'Series'}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
