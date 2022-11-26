@@ -1,12 +1,11 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import useSerie from '../../hooks/useSerie';
+import CustomListScreen from '../../components/CustomListScreen';
 
 const SeriesScreen = () => {
-  return (
-    <View>
-      <Text>SeriesScreen</Text>
-    </View>
-  );
+  const [list] = useSerie();
+
+  return <CustomListScreen list={list} />;
 };
 
 export default SeriesScreen;

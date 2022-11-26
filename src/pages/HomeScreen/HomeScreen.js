@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, Image} from 'react-native';
+import React from 'react';
+import {View, TouchableOpacity, Image, Text} from 'react-native';
 import styles from './HomeScreen.style';
 
 const HomeScreen = ({navigation}) => {
@@ -8,16 +8,24 @@ const HomeScreen = ({navigation}) => {
   };
 
   const handleNavigateSeries = () => {
-    navigation.navigate('MoviesScreen');
+    navigation.navigate('SeriesScreen');
   };
 
   return (
-    <View>
-      <TouchableOpacity onPress={handleNavigateMovie}>
-        <Image source={require('../../../assets/images/netflixMovies.jpg')} />
+    <View style={styles.container}>
+      <TouchableOpacity style={styles.Nav} onPress={handleNavigateMovie}>
+        <Image
+          style={styles.movieImg}
+          source={require('../../../assets/images/netflixMovies.jpg')}
+        />
+        <Text style={styles.title}>Movies</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={handleNavigateSeries}>
-        <Image source={require('../../../assets/images/netflixSeries.jpg')} />
+      <TouchableOpacity style={styles.Nav} onPress={handleNavigateSeries}>
+        <Image
+          style={styles.serieImg}
+          source={require('../../../assets/images/netflixSeries.jpg')}
+        />
+        <Text style={styles.title}>Series</Text>
       </TouchableOpacity>
     </View>
   );
