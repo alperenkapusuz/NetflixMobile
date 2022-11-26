@@ -1,12 +1,11 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import useMovie from '../../hooks/useMovie';
+import CustomListScreen from '../../components/CustomListScreen';
 
 const MoviesScreen = () => {
-  return (
-    <View>
-      <Text>MoviesScreen</Text>
-    </View>
-  );
+  const [list] = useMovie();
+
+  return <CustomListScreen list={list} />;
 };
 
 export default MoviesScreen;
