@@ -1,11 +1,8 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
 import styles from './HomeScreen.style';
-import data from '../../data/data.json';
 
 const HomeScreen = ({navigation}) => {
-  const [list, setList] = useState(data);
-
   const handleNavigateMovie = () => {
     navigation.navigate('MoviesScreen');
   };
