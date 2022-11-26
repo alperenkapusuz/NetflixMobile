@@ -57,16 +57,15 @@ const CustomListScreen = ({list}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.input}>
-        <CustomInput text={search} setText={setSearch} placeholder="Search" />
+        <CustomInput text={search} setText={setSearch} placeholder="Ara" />
         <SelectList
           setSelected={val => setSelected(val)}
           data={dropdownData}
           save="value"
           onSelect={handleSort}
-          dropdownItemStyles={{marginHorizontal: 10}}
           dropdownStyles={{backgroundColor: '#B9B9B9'}}
-          dropdownShown={{backgroundColor: '#B9B9B9'}}
           boxStyles={{backgroundColor: '#B9B9B9'}}
+          search={false}
         />
       </View>
       <FlatList
