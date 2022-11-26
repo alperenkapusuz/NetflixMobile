@@ -21,20 +21,26 @@ export default StyleSheet.create({
     backgroundColor: 'black',
   },
   title: {
-    height: 50,
-    fontSize: 15,
+    fontSize: 13,
+    color: 'white',
   },
   content: {
     height: 40,
   },
   year: {
     color: '#D1D1D1',
-    fontSize: 13,
+    fontSize: 17,
   },
   image: {
     width: Dimensions.get('window').width / 2.15,
     height: Dimensions.get('window').height / 4,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
+  },
+  titleView: {
+    height: 30,
+  },
+  yearView: {
+    alignItems: 'flex-end',
   },
 });

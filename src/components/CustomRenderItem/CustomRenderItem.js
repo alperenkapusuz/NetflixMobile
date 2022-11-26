@@ -13,9 +13,12 @@ const CustomRenderItem = ({item}) => {
           }}
         />
       </View>
-
-      <Text>{item.title}</Text>
-      <Text>{item.releaseYear}</Text>
+      <View style={styles.titleView}>
+        <Text style={styles.title}>{item.title}</Text>
+      </View>
+      <View style={styles.yearView}>
+        <Text style={styles.year}>{item.releaseYear}</Text>
+      </View>
     </View>
   );
 };
