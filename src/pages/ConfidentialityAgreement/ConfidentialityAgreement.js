@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
+/* Gizlilik Sözleşmesi sayfası */
+
 const ConfidentialityAgreement = () => {
   return (
     <View>

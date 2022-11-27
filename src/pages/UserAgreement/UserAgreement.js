@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
+/* Kullanıcı Sözleşmesi sayfası */
+
 const UserAgreement = () => {
   return (
     <View>

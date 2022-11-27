@@ -11,12 +11,14 @@ const CustomListScreen = ({list}) => {
   const [filteredDataSource, setFilteredDataSource] = useState(list);
   const [selected, setSelected] = useState('');
 
+  /* Dropdown'nın seçme datası */
   const dropdownData = [
     {key: '1', value: 'Yeniye Göre Sırala'},
     {key: '2', value: 'Eskiye Göre Sırala'},
     {key: '3', value: 'Random Sırala'},
   ];
 
+  /* useEffect içerisinde aranan veriyi filtreleme işlemi uyguladım aranan verinin uzunluğu 3'ü geçince veri bulunuyor*/
   useEffect(() => {
     const searchFilterFunction = text => {
       if (text === '' || text.length < 3) {
@@ -30,6 +32,7 @@ const CustomListScreen = ({list}) => {
     searchFilterFunction(search);
   }, [data, search]);
 
+  /* dropdown veirisine göre sort yapma işlemi */
   const handleSort = () => {
     if (selected === 'Yeniye Göre Sırala') {
       setFilteredDataSource(
@@ -54,6 +57,7 @@ const CustomListScreen = ({list}) => {
     return <CustomRenderItem item={item} />;
   };
 
+  /* oluşturduğum customInput ve SelectList, Flatlist componentlerini döndürdüm */
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.input}>

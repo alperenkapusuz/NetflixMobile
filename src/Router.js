@@ -12,6 +12,7 @@ import ConfidentialityAgreement from './pages/ConfidentialityAgreement';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
+/* Stack ve Tab Navigatoru Birlikte Kullandım*/
 const NavigationStack = () => {
   return (
     <Stack.Navigator

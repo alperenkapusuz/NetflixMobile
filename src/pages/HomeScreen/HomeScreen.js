@@ -4,11 +4,11 @@ import styles from './HomeScreen.style';
 
 const HomeScreen = ({navigation}) => {
   const handleNavigateMovie = () => {
-    navigation.navigate('MoviesScreen');
+    navigation.navigate('MoviesScreen'); /* Movies screen yönlendirmesi */
   };
 
   const handleNavigateSeries = () => {
-    navigation.navigate('SeriesScreen');
+    navigation.navigate('SeriesScreen'); /* Series screen yönlendirmesi */
   };
 
   return (

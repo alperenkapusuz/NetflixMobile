@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Image, Text, Dimensions} from 'react-native';
+import {View, Image, Text} from 'react-native';
 import styles from './CustomRenderItem.style';
-
+// FlatList'in render ettiği componenti
 const CustomRenderItem = ({item}) => {
   return (
     <View style={styles.container}>
