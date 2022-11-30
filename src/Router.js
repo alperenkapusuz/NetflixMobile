@@ -56,7 +56,7 @@ const App = () => {
           options={{
             headerShown: false,
             tabBarIcon: () => {
-              return <Icon name="book" size={20} />;
+              return <Icon name="book" size={21} />;
             },
           }}
         />
